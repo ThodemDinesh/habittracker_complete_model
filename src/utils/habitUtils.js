@@ -24,7 +24,7 @@ export const calculateStreak = (completions) => {
   return streak;
 };
 
-export const calculateCompletionRate = (habit, days = 30) => {
+export const calculateCompletionRate = (habit, days = 7) => { /*it was 30 i changes it to 7*/
   if (!habit.completions) return 0;
   
   const completedDays = Object.keys(habit.completions).length;

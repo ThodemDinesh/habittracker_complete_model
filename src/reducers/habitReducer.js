@@ -32,21 +32,25 @@ export const habitReducer = (state, action) => {
         habits: state.habits.filter(habit => habit.id !== action.payload)
       };
     
-    case 'TOGGLE_COMPLETION':
+    case 'TOGGLE_COMPLETION': {
+      const { habitId, date, time } = action.payload;
       return {
         ...state,
-        habits: state.habits.map(habit =>
-          habit.id === action.payload.habitId
+        habits: state.habits.map(habit => 
+          habit.id === habitId
             ? {
                 ...habit,
                 completions: {
                   ...habit.completions,
-                  [action.payload.date]: !habit.completions?.[action.payload.date]
+                  [date]: habit.completions?.[date] 
+                    ? undefined // Unmark if already completed
+                    : { time }  // Store as object with timestamp
                 }
               }
             : habit
         )
       };
+    }
     
     default:
       return state;

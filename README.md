@@ -173,8 +173,4 @@ Feel free to fork the repo, open issues, or reach out!
 
 ⭐ If you found this helpful or interesting, please give the repository a star!
 
-```
 
----
-
-```

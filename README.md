@@ -1,74 +1,180 @@
-<<<<<<< HEAD
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+````markdown
+# 🧠 HabitTracker
 
-## Available Scripts
+A full-stack habit tracking web application designed to help users build good habits and break bad ones through structured tracking, reminders, and real-time progress analytics. Built with the **MERN stack** (MongoDB, Express.js, React, Node.js), it features secure authentication, a rich dashboard, and customizable settings — all free and accessible.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🚀 Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 🖥️ Frontend
+- React.js  
+- React Router DOM  
+- React Icons  
+- React Hot Toast  
+- date-fns
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### ⚙️ Backend
+- Node.js  
+- Express.js  
+- MongoDB (Mongoose)  
+- JWT Authentication  
+- bcryptjs  
+- dotenv   
+- node-cron  
+- CORS
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📦 Installation & Setup (Local)
 
-### `npm run build`
+### 🔧 Prerequisites
+- [Node.js](https://nodejs.org/) & npm
+- [MongoDB](https://www.mongodb.com/) (Local or Atlas)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 📥 Clone the Repository
+```bash
+git clone https://github.com/your-username/habitracker.git
+cd habitracker
+````
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### ⚙️ Setup Backend
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+cd backend
+npm install
+npm run dev
+```
 
-### `npm run eject`
+Create a `.env` file inside the `backend/` directory:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```env
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 💻 Setup Frontend
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+cd ..
+npm install
+npm start
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 🔧 Features
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* ✅ User Registration & JWT-based Login
+* ✅ Add / Update / Delete Habits
+* ✅ Daily Habit Completion Tracker
+* ✅ Analytics Dashboard with Insights
+* ✅ Real-Time Progress Updates
+* ✅ Email Notification System
+* ✅ Theme Toggle & Protected Routes
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## 🧪 Usage Flow
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. **Sign Up** with your email & password
+2. **Login** to your personalized dashboard
+3. **Create & Track Habits** daily
+4. Visualize progress on the **Analytics** page
+5. Customize your experience in **Settings**
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 📁 Folder Structure
 
-### Making a Progressive Web App
+```
+project-root/
+├── backend/
+│   ├── controllers/
+│   │   ├── authController.js
+│   │   └── habitController.js
+│   ├── middleware/
+│   │   └── authMiddleware.js
+│   ├── models/
+│   │   ├── Habit.js
+│   │   └── User.js
+│   ├── routes/
+│   │   ├── auth.js
+│   │   └── habits.js
+│   ├── services/
+│   │   └── notificationService.js
+│   ├── .env
+│   └── app.js
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+├── public/
+│   └── ...
 
-### Advanced Configuration
+├── src/
+│   ├── components/
+│   │   ├── habits/
+│   │   │   ├── habitCard.jsx
+│   │   │   └── habitForm.jsx
+│   │   ├── layout/
+│   │   │   └── Header.jsx
+│   │   ├── authWrapper.js
+│   │   └── ProtectedRoute.js
+│   │
+│   ├── context/
+│   │   ├── authContext.js
+│   │   ├── habitContext.jsx
+│   │   ├── notificationContext.js
+│   │   └── themeContext.js
+│   │
+│   ├── pages/
+│   │   ├── Analytics.jsx
+│   │   ├── Auth.css
+│   │   ├── Dashboard.jsx
+│   │   ├── HabitsPage.jsx
+│   │   ├── Home.jsx
+│   │   ├── Login.js
+│   │   ├── Settings.jsx
+│   │   └── Signup.js
+│   │
+│   ├── reducers/
+│   │   └── habitReducer.js
+│   ├── utils/
+│   │   ├── dateUtil.js
+│   │   └── habitUtils.js
+│   ├── .env
+│   └── app.js
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## 🎯 Project Motivation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+While exploring habit-tracking tools, I noticed most quality apps were locked behind paywalls. To make habit tracking accessible for everyone, I built this free and open-source alternative focused on simplicity, analytics, and user control.
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-=======
-# habittracker
->>>>>>> f84dac769bea66dd7348b5256d4a706ef96f472b
+## 🧠 Future Scope
+
+* [ ] Push Notifications
+* [ ] Habit Streak Rewards System
+* [ ] Social Sharing of Achievements
+* [ ] Mobile App using React Native
+
+---
+
+## 🙋 Author
+
+**Developed by [THODEM VENKATA DINESH REDDY](https://github.com/ThodemDinesh)**
+Open to contributions, feedback, or collaboration.
+Feel free to fork the repo, open issues, or reach out!
+
+---
+
+⭐ If you found this helpful or interesting, please give the repository a star!
+
+```
+
+---
+
+```

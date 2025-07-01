@@ -1172,6 +1172,7 @@ body {
   color: var(--danger-color);
 }
 
+
 /* Modal Styles */
 /* Modal Overlay - Simplified */
 .modal-overlay {
@@ -1261,6 +1262,7 @@ body {
 .form-group textarea::placeholder {
   color: var(--text-light, #94a3b8);
 }
+
 
 /* Icon and Color Grids - Simplified */
 .icon-grid,
@@ -1475,6 +1477,13 @@ body {
   font-weight: 500;
 }
 
+/* .app-theme-dark .form-group input,
+.app-theme-dark .form-group select,
+.app-theme-dark .form-group textarea {
+  background: var(--background, #0f172a);
+  border-color: var(--border, #334155);
+  color: #f1f5f9 !important; /* FIXED: Force light text */
+/* } */ */
 .app-theme-dark .form-group input,
 .app-theme-dark .form-group select,
 .app-theme-dark .form-group textarea {
@@ -1483,10 +1492,16 @@ body {
   color: #f1f5f9 !important; /* FIXED: Force light text */
 }
 
-.app-theme-dark .form-group input::placeholder,
+
+/* .app-theme-dark .form-group input::placeholder,
 .app-theme-dark .form-group textarea::placeholder {
   color: #94a3b8 !important; /* FIXED: Light gray for placeholders */
+/* } */ */
+.app-theme-dark .form-group input::placeholder,
+.app-theme-dark .form-group textarea::placeholder {
+  color: #666666 !important; /* Dark gray for placeholders */
 }
+
 
 .app-theme-dark .form-group input:focus,
 .app-theme-dark .form-group select:focus,

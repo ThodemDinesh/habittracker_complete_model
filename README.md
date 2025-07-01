@@ -171,6 +171,10 @@ Feel free to fork the repo, open issues, or reach out!
 
 ---
 
+<<<<<<< HEAD
 ⭐ If you found this helpful or interesting, please give the repository a star!
 
 
+=======
+⭐ If you found this helpful or interesting, please give the repository a star!
+>>>>>>> dd258fb (Updated habit controller, routes, and components)

@@ -12,7 +12,6 @@ A full-stack habit tracking web application designed to help users build good ha
 - React.js  
 - React Router DOM  
 - React Icons  
-- React Hot Toast  
 - date-fns
 
 ### ⚙️ Backend
@@ -21,8 +20,7 @@ A full-stack habit tracking web application designed to help users build good ha
 - MongoDB (Mongoose)  
 - JWT Authentication  
 - bcryptjs  
-- dotenv   
-- node-cron  
+- dotenv    
 - CORS
 
 ---
@@ -72,7 +70,7 @@ npm start
 * ✅ Daily Habit Completion Tracker
 * ✅ Analytics Dashboard with Insights
 * ✅ Real-Time Progress Updates
-* ✅ Email Notification System
+* ✅ Notification System
 * ✅ Theme Toggle & Protected Routes
 
 ---
